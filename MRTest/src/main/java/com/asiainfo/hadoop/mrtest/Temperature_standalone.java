@@ -101,7 +101,7 @@ public class Temperature_standalone {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 
-		conf.setStrings("mapred.reduce.tasks", "2");
+		conf.setStrings("mapred.reduce.tasks", "1");
 
 		// 设置输入目录
 		FileInputFormat.addInputPath(job, new Path(args[0]));
