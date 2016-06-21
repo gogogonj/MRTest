@@ -1,0 +1,2 @@
+# MRTest
+hadoop mapreduce demo
