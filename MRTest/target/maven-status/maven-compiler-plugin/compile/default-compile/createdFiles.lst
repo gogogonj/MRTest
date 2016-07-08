@@ -1,0 +1,15 @@
+com\asiainfo\hadoop\mrtest\Temperature_standalone.class
+com\asiainfo\hadoop\mrtest\Temperature_standalone$TempMapper.class
+com\asiainfo\hadoop\mrtest\DpiLabelMapper.class
+com\asiainfo\hadoop\mrtest2\DpiLabelReducer.class
+com\asiainfo\hadoop\mrtest2\Main.class
+com\asiainfo\hadoop\mrtest2\Tools.class
+com\asiainfo\hadoop\mrtest\Temperature4$TempReducer.class
+com\asiainfo\hadoop\mrtest\DpiLabelReducer.class
+com\asiainfo\hadoop\mrtest2\DpiLabelCombiner.class
+com\asiainfo\hadoop\mrtest2\DpiLabelMapper.class
+com\asiainfo\hadoop\mrtest\Temperature4.class
+com\asiainfo\hadoop\mrtest\Temperature_standalone$TempReducer.class
+com\asiainfo\hadoop\mrtest\Tools.class
+com\asiainfo\hadoop\mrtest\Main.class
+com\asiainfo\hadoop\mrtest\Temperature4$TempMapper.class

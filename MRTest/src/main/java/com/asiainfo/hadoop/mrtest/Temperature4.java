@@ -97,13 +97,17 @@ public class Temperature4 extends Configured implements Tool {
 		job.setReducerClass(TempReducer.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
+		
 		// 设置输入目录
 		FileInputFormat.addInputPath(job, new Path(args[0]));
+		
 		// 设置输出目录
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		
 		// 输出文件进行压缩
 		// FileOutputFormat.setCompressOutput(job, true);
 		// FileOutputFormat.setOutputCompressorClass(job, GzipCodec.class);
+		
 		// 删除输出目录
 		FileSystem filesys = FileSystem.get(getConf());
 		filesys.delete(new Path(args[1]), true);
