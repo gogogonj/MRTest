@@ -1,4 +1,4 @@
-package com.asiainfo.hadoop.mrtest2;
+package com.asiainfo.hadoop.addResource;
 
 import java.io.IOException;
 
@@ -18,23 +18,16 @@ class DpiLabelReducer extends Reducer<Text, Text, NullWritable, Text> {
 	public void reduce(Text key, Iterable<Text> values,
 			Reducer<Text, Text, NullWritable, Text>.Context context)
 			throws IOException, InterruptedException {
-		String score1 = "";
-		String score2 = "";
+		String keyStr = key.toString();
 		for (Text value : values) {
-			String [] args = value.toString().split(",");
-			if(args[1].equals("1")){
-				score1 = args[2];
-			}else if(args[1].equals("2")){
-				score2 = args[2];
+			if (keyStr.equals("aa")) {
+				mos.write("xx", keyStr, value, "AA2");
+			} else if (keyStr.equals("bb")) {
+				mos.write("xx", keyStr, value, "BB2");
+			} else if (keyStr.equals("cc")) {
+				mos.write("xx", keyStr, value, "CC2");
 			}
 		}
-		String result = "";
-		if(score1.equals("10") && score2.equals("50")){
-			result = key.toString()+",aaaaa";
-		}else{
-			result = key.toString()+",bbbbb";
-		}
-		this.mos.write("NullKey", null, new Text(result), "DpiLabel-13");
 	}
 
 	protected void cleanup(

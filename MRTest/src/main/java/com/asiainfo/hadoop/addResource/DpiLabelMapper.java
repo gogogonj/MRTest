@@ -1,4 +1,4 @@
-package com.asiainfo.hadoop.mrtest2;
+package com.asiainfo.hadoop.addResource;
 
 import java.io.IOException;
 
@@ -27,6 +27,10 @@ class DpiLabelMapper extends Mapper<LongWritable, Text, Text, Text> {
 	protected void map(LongWritable key, Text value,
 			Mapper<LongWritable, Text, Text, Text>.Context context) {
 		try {
+			
+			String s = context.getConfiguration().get("license");
+			System.out.println("s======"+s);
+			
 			String[] line = value.toString().split(",");
 			context.write(new Text(line[0]), value);
 		} catch (IOException e) {

@@ -1,4 +1,4 @@
-package com.asiainfo.hadoop.mrtest2;
+package com.asiainfo.hadoop.MultipleInputs;
 
 import java.io.IOException;
 
