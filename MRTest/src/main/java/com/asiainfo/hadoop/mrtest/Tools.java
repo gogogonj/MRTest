@@ -25,7 +25,7 @@ class Tools extends Configured implements Tool {
 
 		Configuration conf = getConf();
 
-		Job job = Job.getInstance(conf, "test");
+		Job job = Job.getInstance(conf, "mrtest");
 		job.setJarByClass(Tools.class);
 		job.setMapperClass(DpiLabelMapper.class);
 		job.setReducerClass(DpiLabelReducer.class);
